@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+	<constants>
+	</constants>
+	<classes>
+		<class id="Person" _delta="must_exist">
+			<properties>
+				<uniqueness_rules>
+					<rule id="employee_number" _delta="delete"/>
+					<rule id="S_employee_number" _delta="define">
+						<attributes>
+							<attribute id="org_id"/>
+							<attribute id="employee_number"/>
+						</attributes>
+						<filter><![CDATA[employee_number != '' AND employee_number != '0000000']]></filter>
+						<disabled>false</disabled>
+						<is_blocking>true</is_blocking>
+					</rule>
+				</uniqueness_rules>
+			</properties>
+		</class>
+	</classes>
+	<menus>
+	</menus>
+	<user_rights>
+		<groups>
+		</groups>
+		<profiles>
+		</profiles>
+	</user_rights>
+</itop_design>
