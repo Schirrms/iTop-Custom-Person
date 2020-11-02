@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5">
 	<constants>
 	</constants>
 	<classes>
@@ -14,7 +14,7 @@
 			<fields>
 				<field id="loginname" xsi:type="AttributeString" _delta="define">
 					<sql>loginname</sql>
-					<default_value/>
+					<default_value></default_value>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
 			</fields>
@@ -26,7 +26,7 @@
 								<item id="fieldset:Person:info" _delta="must_exist">
 									<items>
 										<item id="loginname" _delta="define">
-											<rank>75</rank>
+											<rank>90</rank>
 										</item>
 									</items>
 								</item>
