@@ -21,13 +21,13 @@
 			<presentation>
 				<details>
 					<items>
-										<item id="loginname" _delta="define">
-											<rank>90</rank>
-										</item>
 						<item id="col:col1" _delta="must_exist">
 							<items>
 								<item id="fieldset:Person:info" _delta="must_exist">
 									<items>
+										<item id="loginname" _delta="define">
+											<rank>90</rank>
+										</item>
 									</items>
 								</item>
 							</items>
