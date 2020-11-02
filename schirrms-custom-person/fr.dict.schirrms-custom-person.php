@@ -8,7 +8,5 @@
 
 Dict::Add('FR FR', 'French', 'Français', array(
 	// Dictionary entries go here
-	'Class:Person/UniquenessRule:S_employee_number+' => 'Le numéro d\'employé doit être unique dans l\'organisation',
-	'Class:Person/UniquenessRule:S_employee_number' => 'il y a déjà une personne avec ce numéro d\'employé dans l\'organisation \'$this->org_name$\'',
-));
+	'Class:Person/Attribute:loginname' => 'Compte de l\'utilisateur',));
 ?>

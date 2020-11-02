@@ -6,18 +6,42 @@
 		<class id="Person" _delta="must_exist">
 			<properties>
 				<uniqueness_rules>
-					<rule id="employee_number" _delta="delete"/>
-					<rule id="S_employee_number" _delta="define">
-						<attributes>
-							<attribute id="org_id"/>
-							<attribute id="employee_number"/>
-						</attributes>
-						<filter><![CDATA[employee_number != '' AND employee_number != '0000000']]></filter>
-						<disabled>false</disabled>
-						<is_blocking>true</is_blocking>
+					<rule id="employee_number">
+						<filter _delta="redefine"><![CDATA[employee_number != '' AND employee_number != '0000000']]></filter>
 					</rule>
 				</uniqueness_rules>
 			</properties>
+			<fields>
+				<field id="loginname" xsi:type="string" _delta="define">
+					<sql>loginname</sql>
+					<default_value/>
+					<is_null_allowed>true</is_null_allowed>
+				</field>
+				<presentation>
+					<details>
+						<items>
+							<item id="col:col1">
+								<items>
+									<item id="fieldset:Person:info">
+										<items>
+											<item id="loginname" _delta="define">
+												<rank>90</rank>
+											</item>
+										</items>
+									</item>
+								</items>
+							</item>
+						</items>
+					</details>
+					<search>
+						<items>
+							<item id="loginname" _delta="define">
+								<rank>55</rank>
+							</item>
+						</items>
+					</search>
+				</presentation>
+			</fields>
 		</class>
 	</classes>
 	<menus>
