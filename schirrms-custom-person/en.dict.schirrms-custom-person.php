@@ -9,5 +9,8 @@
 Dict::Add('EN US', 'English', 'English', array(
 	// Dictionary entries go here
 	'Class:Person/Attribute:loginname' => 'User\'s login name',
+	'Class:Person/Attribute:uid' => 'sync uid',
+	'Class:Contact/Attribute:dn' => 'Microsoft DN',
+	'Class:lnkPersonToTeam/Attribute:team_in_team' => 'intermediate team(s)',
 ));
 ?>

@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5">
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.7">
 	<constants>
 	</constants>
 	<classes>
+		<class id="Contact" _delta="must_exist">
+			<fields>
+				<field id="dn" xsi:type="AttributeString" _delta="define">
+					<sql>dn</sql>
+						<default_value></default_value>
+					<is_null_allowed>true</is_null_allowed>
+				</field>
+			</fields>
+		</class>
 		<class id="Person" _delta="must_exist">
 			<properties>
 				<uniqueness_rules>
@@ -17,6 +26,11 @@
 					<default_value></default_value>
 					<is_null_allowed>true</is_null_allowed>
 				</field>
+				<field id="uid" xsi:type="AttributeString" _delta="define">
+					<sql>uid</sql>
+					<default_value></default_value>
+					<is_null_allowed>true</is_null_allowed>
+				</field>
 			</fields>
 			<presentation>
 				<details>
@@ -25,6 +39,9 @@
 							<items>
 								<item id="fieldset:Person:info" _delta="must_exist">
 									<items>
+										<item id="dn" _delta="define">
+											<rank>85</rank>
+										</item>
 										<item id="loginname" _delta="define">
 											<rank>90</rank>
 										</item>
@@ -41,6 +58,42 @@
 						</item>
 					</items>
 				</search>
+			</presentation>
+		</class>
+		<class id="Team" _delta="must_exist">
+			<presentation>
+				<details>
+					<items>
+						<item id="dn" _delta="define">
+							<rank>72</rank>
+						</item>
+					</items>
+				</details>
+			</presentation>
+		</class>
+		<class id="lnkPersonToTeam" _delta="must_exist">
+			<fields>
+				<field id="team_in_team" xsi:type="AttributeString" _delta="define">
+					<sql>team_in_team</sql>
+					<default_value></default_value>
+					<is_null_allowed>true</is_null_allowed>					
+				</field>
+			</fields>
+			<presentation>
+				<details>
+					<items>
+						<item id="team_in_team" _delta="define">
+							<rank>40</rank>
+						</item>
+					</items>
+				</details>
+				<list>
+					<items>
+						<item id="team_in_team" _delta="define">
+							<rank>40</rank>
+						</item>
+					</items>
+				</list>
 			</presentation>
 		</class>
 	</classes>

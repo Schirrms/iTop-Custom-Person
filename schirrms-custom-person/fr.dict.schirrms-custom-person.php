@@ -8,5 +8,9 @@
 
 Dict::Add('FR FR', 'French', 'Français', array(
 	// Dictionary entries go here
-	'Class:Person/Attribute:loginname' => 'Compte de l\'utilisateur',));
+	'Class:Person/Attribute:loginname' => 'Compte de l\'utilisateur',
+	'Class:Person/Attribute:uid' => 'uid de synchro',
+	'Class:Contact/Attribute:dn' => 'DN Microsoft',
+	'Class:lnkPersonToTeam/Attribute:team_in_team' => 'Equipe(s) intermédiaire(s)',
+));
 ?>
